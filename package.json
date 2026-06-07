@@ -1,0 +1,71 @@
+{
+  "name": "@usenami/plugin-signer",
+  "version": "0.2.0",
+  "description": "ElizaOS plugin: place / cancel perp orders on 6 venues (Binance, OKX, Asterdex, KuCoin, Bybit, Hyperliquid), query account, and verify Nitro Enclave attestation through the Usenami Signer — keys never leave the enclave.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "elizaos-plugin",
+    "eliza-plugin",
+    "elizaos",
+    "trading",
+    "binance",
+    "okx",
+    "kucoin",
+    "bybit",
+    "hyperliquid",
+    "perpetuals",
+    "attested-compute",
+    "aws-nitro-enclaves",
+    "ai-agents",
+    "usenami",
+    "signer"
+  ],
+  "author": "Usenami",
+  "license": "MIT",
+  "homepage": "https://usenami.io/signer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/namixai/plugin-signer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/namixai/plugin-signer/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@elizaos/core": "^1.0.0"
+  },
+  "devDependencies": {
+    "@elizaos/core": "^1.0.0",
+    "@types/node": "^22.19.19",
+    "typescript": "^5.6.0",
+    "vitest": "^4.1.7"
+  },
+  "agentConfig": {
+    "actions": [
+      "GET_SIGNER_ATTESTATION",
+      "LIST_SIGNER_VENUES",
+      "GET_SIGNER_ACCOUNT",
+      "PLACE_SIGNER_ORDER",
+      "CANCEL_SIGNER_ORDER"
+    ],
+    "providers": [
+      "SIGNER_ATTESTATION_PROVIDER"
+    ]
+  }
+}

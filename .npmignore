@@ -1,0 +1,11 @@
+node_modules/
+src/
+tests/
+coverage/
+tsconfig.json
+vitest.config.ts
+.gitignore
+.npmignore
+.DS_Store
+.env
+*.log
