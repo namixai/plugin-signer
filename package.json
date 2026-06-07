@@ -67,5 +67,12 @@
     "providers": [
       "SIGNER_ATTESTATION_PROVIDER"
     ]
+  },
+  "elizaos": {
+    "kind": "plugin",
+    "plugin": {
+      "displayName": "Usenami Signer",
+      "category": "finance"
+    }
   }
 }
